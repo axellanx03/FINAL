@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/your-logo-url.png" type="image/png">
+    <title>Checkout - Kaffee-In</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/your-logo-url.png" alt="KAFFEE IN LOGO">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="customize-coffee.html">CREATE</a></li>
+                <li><a href="feature.html">FEATURED</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <div id="profileContainer" style="display: none;">
+                <img src="img/profile-image-url.jpg" alt="Profile" id="profileImage" class="profile-image">
+                <div id="profilePanel" class="profile-panel" style="display: none;">
+                    <button id="editDetails">Edit Details</button>
+                    <button id="logout">Logout</button>
+                </div>
+            </div>
+            <a href="sign-in.html" id="signIn" class="sign-in-button">Sign in</a>
+            <a href="#" id="joinNow" class="join-button">Join now</a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="left-panel">
+                <span class="back-to-menu" id="backToMenu">← Back to menu</span>
+                <h2>Review order (0)</h2>
+                <p>Ready in around 0-0 minutes</p>
+                <h3>Payment Options</h3>
+                <div class="payment-options">
+                    <button class="payment-button" id="creditCardButton" onclick="document.getElementById('creditCardModal').style.display='flex';">Credit/Debit Card</button>
+                    <button class="payment-button" id="paypalButton" onclick="window.open('https://www.paypal.com/ph/home', '_blank');">PayPal</button>
+                    <button class="payment-button" id="cashButton">Cash</button>
+                </div>
+            </div>
+            <div class="right-panel">
+                <div class="order-summary">
+                    <!-- Order items will be dynamically inserted here -->
+                </div>
+                <div id="orderPreparationPanel" class="order-preparation-panel" style="display: none;">
+                    <h2>Your order is being prepared</h2>
+                    <p>Thank you! Brew with us again soon.</p>
+                    <button id="okButton">OK</button>
+                </div>
+                <button class="continue-button" id="continueButton">Continue</button>
+            </div>
+        </div>
+        <div id="creditCardModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button" id="closeModal">&times;</span>
+                <h2>Add New Credit Card</h2>
+                <div class="protection-message">
+                    Your credit card details are protected. We partner with Airpay so that your card details are safe. Shopee will not have access to your card info.
+                </div>
+                <div class="card-details-header">
+                    <span>Card Details</span>
+                    <div class="card-icons">
+                        <img src="img/visa.png" alt="Visa" />
+                        <img src="img/mastercard.png" alt="MasterCard" />
+                        <img src="img/JCB.jpg" alt="JCB" />
+                    </div>
+                </div>
+                <form id="creditCardForm">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+
+                    <div class="expiry-cvv">
+                        <div>
+                            <label for="expiryDate">Expiry Date (MM/YY)</label>
+                            <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                        </div>
+                        <div>
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123" required>
+                        </div>
+                    </div>
+
+                    <label for="nameOnCard">Name on Card</label>
+                    <input type="text" id="nameOnCard" placeholder="John Doe" required>
+
+                    <p>PHP1.00 will be deducted as verification fee. It will be refunded to your card within 14 days.</p>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div id="cashNotification" class="notification-panel" style="display: none;">
+            <span class="close-button" id="closeNotification">&times;</span>
+            <p>Thanks for your order! Please head to the store to make your payment and get the total amount ready. We look forward to serving you!</p>
+        </div>
+    </main>
+    <script src="checkout.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check login status
+        if (localStorage.getItem('isLoggedIn') === 'true') {
+            document.getElementById('signIn').style.display = 'none';
+            document.getElementById('joinNow').style.display = 'none';
+            document.getElementById('profileContainer').style.display = 'block';
+        }
+
+        // Profile image click event
+        document.getElementById('profileImage').addEventListener('click', function() {
+            const panel = document.getElementById('profilePanel');
+            panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Edit details click event
+        document.getElementById('editDetails').addEventListener('click', function() {
+            window.location.href = 'edit-details.html';
+        });
+
+        // Logout click event
+        document.getElementById('logout').addEventListener('click', function() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        });
+
+        document.getElementById('continueButton').addEventListener('click', function() {
+            document.getElementById('orderPreparationPanel').style.display = 'block';
+        });
+
+        document.getElementById('okButton').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    });
+    </script>
+</body>
+</html>

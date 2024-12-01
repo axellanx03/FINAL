@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/your-logo-url.png" type="image/png">
+    <title>Menu - Kaffee-In</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/your-logo-url.png" alt="KAFFEE IN LOGO">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="menu.html" class="active">MENU</a></li>
+                <li><a href="customize-coffee.html">CREATE</a></li>
+                <li><a href="feature.html">FEATURED</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <div id="profileContainer" style="display: none;">
+                <img src="img/profile-image-url.jpg" alt="Profile" id="profileImage" class="profile-image">
+                <div id="profilePanel" class="profile-panel" style="display: none;">
+                    <button id="editDetails">Edit Details</button>
+                    <button id="logout">Logout</button>
+                </div>
+            </div>
+            <a href="sign-in.html" id="signIn" class="sign-in-button">Sign in</a>
+            <a href="join.html" id="joinNow" class="join-button">Join now</a>
+        </div>
+    </header>
+    <main>
+        <h1>Products</h1>
+        <div class="product-categories">
+            <button class="category-button active-category" data-category="all">All</button>
+            <button class="category-button" data-category="cookies">Cookies</button>
+            <button class="category-button" data-category="beverages">Beverages</button>
+            <button class="category-button" data-category="frappes">Frappes</button>
+        </div>
+        <div class="product-container">
+            <div class="product" data-category="cookies">
+                <img src="img/prod1.jpg" alt="Red Velv" class="product-image">
+                <h2>Red Velvet Cookie</h2>
+                <p>₱90</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="cookies">
+                <img src="img/prod2.jpg" alt="Choc Chip" class="product-image">
+                <h2>Chocolate Chip Cookie</h2>
+                <p>₱90</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="beverages">
+                <img src="img/lattee.jpg" alt="Butter Rum Latte" class="product-image">
+                <h2>Butter Rum Latte</h2>
+                <p>₱250</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="frappes">
+                <img src="img/prod11.jpg" alt="OreoFrapp" class="product-image">
+                <h2>Oreo Frappuccino</h2>
+                <p>₱220</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="cookies">
+                <img src="img/prod3.jpg" alt="Matcha" class="product-image">
+                <h2>Match Cream Cheese Cookie</h2>
+                <p>₱90</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="cookies">
+                <img src="img/prod4.jpg" alt="Smore" class="product-image">
+                <h2>S'mores Cookie</h2>
+                <p>₱110</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="cookies">
+                <img src="img/prod5.jpg" alt="Brookie" class="product-image">
+                <h2>Brookie(Brownies x Cookie)</h2>
+                <p>₱110</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="cookies">
+                <img src="img/prod6.jpg" alt="ChocOat" class="product-image">
+                <h2>Oatmeal Walnut Cookie</h2>
+                <p>₱110</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="cookies">
+                <img src="img/prod7.jpg" alt="Rasp" class="product-image">
+                <h2>Cranberry Oatmeal Walnut Cookie</h2>
+                <p>₱110</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="cookies">
+                <img src="img/prod8.jpg" alt="Bisc" class="product-image">
+                <h2>Biscoff Cookie</h2>
+                <p>₱110</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="beverages">
+                <img src="img/barke.webp" alt="French Press" class="product-image">
+                <h2>Peppermint Bark Latte</h2>
+                <p>₱260</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="frappes">
+                <img src="img/prod12.jpg" alt="ChocFra" class="product-image">
+                <h2>Chocolate Chip Frappuccino</h2>
+                <p>₱200</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="beverages">
+                <img src="img/lati.png" alt="Coffee Tumbler" class="product-image">
+                <h2>Cookie Butter Latte</h2>
+                <p>₱250</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="beverages">
+                <img src="img/peppermint.webp" alt="Peppermint Bark Velvet Ice" class="product-image">
+                <h2>Peppermint Bark Velvet Ice</h2>
+                <p>₱260</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="frappes">
+                <img src="img/prod15.jpg" alt="Coffee Filter Paper" class="product-image">
+                <h2>Classic Frappuccino</h2>
+                <p>₱260</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="beverages">
+                <img src="img/prod16.jpg" alt="Coffee Scale" class="product-image">
+                <h2>Choco Mallow Drink</h2>
+                <p>₱200</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="beverages">
+                <img src="img/prod17.jpg" alt="Cold Brew Maker" class="product-image">
+                <h2>Super Dark Chocolate Drink</h2>
+                <p>₱200</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="beverages">
+                <img src="img/prod18.jpg" alt="Coffee Syrup" class="product-image">
+                <h2>Iced Matcha Latte</h2>
+                <p>₱250</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="beverages">
+                <img src="img/prod19.jpg" alt="Coffee Creamer" class="product-image">
+                <h2>Strawberry Coconut Daiquiri</h2>
+                <p>₱150</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+            <div class="product" data-category="beverages">
+                <img src="img/prod20.jpg" alt="Coffee Beans Gift Set" class="product-image">
+                <h2>French Vanilla Hot Chocolate</h2>
+                <p>₱300</p>
+                <button class="order-button">ADD TO CART</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>In-store Menu</h3>
+                <ul>
+                    <li><a href="#">In-store Menu</a></li>
+                    <li><a href="#">Store Locator</a></li>
+                </ul>
+            </div>
+            <div class="footer-order">
+                <h3>ORDER NOW</h3>
+                <p>
+                    <span class="order-link" id="foodpandaLink">FoodPanda</span> • 
+                    <span class="order-link" id="grabfoodLink">GrabFood</span>
+                </p>
+            </div>
+            <div class="footer-signup">
+                <h3>SIGN UP FOR UPDATES.</h3>
+                <p>Promotions, new products, and exclusive sales delivered straight to your inbox.</p>
+                <input type="email" placeholder="My email address">
+                <button class="subscribe-button">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Kaffee-In. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#">&#xf09a;</a> <!-- Facebook -->
+                <a href="#">&#xf099;</a> <!-- Twitter -->
+                <a href="#">&#xf16d;</a> <!-- Instagram -->
+            </div>
+        </div>
+    </footer>
+    <button id="cartButton" class="cart-button" style="display: none;">
+        🛒 Cart <span id="cartNotificationCount" class="notification-count" style="display: none;"></span>
+    </button>
+    <div id="cartPanel" class="cart-panel" style="display: none;">
+        <h2>Your Cart</h2>
+        <span id="backToMenu" class="back-to-menu">X</span>
+        <ul id="cartItemsList"></ul>
+        <div id="totalPrice" style="font-weight: bold; margin-top: 10px;"></div>
+        <div id="emptyCartMessage" style="display: none; color: red;">Your cart is empty.</div>
+        <button id="checkoutButton" class="checkout-button">Checkout</button>
+    </div>
+    <!-- Floating Search Icon -->
+    <span id="searchIcon" class="floating-search-icon">
+        <i class="fas fa-search"></i> <!-- Font Awesome search icon -->
+    </span>
+    <div id="searchPanel" class="search-panel" style="display: none;">
+        <span id="closeSearch" class="close-search">X</span>
+        <input type="text" id="searchInput" placeholder="Search for products..." />
+        <ul id="searchResults"></ul>
+    </div>
+    <script src="menu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check login status
+            if (localStorage.getItem('isLoggedIn') === 'true') {
+                document.getElementById('signIn').style.display = 'none';
+                document.getElementById('joinNow').style.display = 'none';
+                document.getElementById('profileContainer').style.display = 'block';
+            }
+
+            // Profile image click event
+            document.getElementById('profileImage').addEventListener('click', function() {
+                const panel = document.getElementById('profilePanel');
+                panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+            });
+
+            // Edit details click event
+            document.getElementById('editDetails').addEventListener('click', function() {
+                window.location.href = 'edit-details.html'; // Create this file
+            });
+
+            // Logout click event
+            document.getElementById('logout').addEventListener('click', function() {
+                localStorage.removeItem('isLoggedIn'); // Remove login state
+                window.location.reload(); // Reload the page to show sign in buttons
+            });
+        });
+
+        function updateCart() {
+            const cartItemsList = document.getElementById('cartItemsList');
+            const emptyCartMessage = document.getElementById('emptyCartMessage');
+            
+            // Check if cart is empty
+            if (cartItemsList.children.length === 0) {
+                emptyCartMessage.style.display = 'block'; // Show empty cart message
+            } else {
+                emptyCartMessage.style.display = 'none'; // Hide empty cart message
+            }
+        }
+
+        document.getElementById('foodpandaLink').addEventListener('click', function() {
+            window.open('https://www.foodpanda.com/', '_blank'); // Open FoodPanda in a new tab
+        });
+
+        document.getElementById('grabfoodLink').addEventListener('click', function() {
+            window.open('https://food.grab.com/ph/en/', '_blank'); // Open GrabFood in a new tab
+        });
+    </script>
+</body>
+</html>

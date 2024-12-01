@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="img/your-logo-url.png" type="image/png">
+    <title>About Us - Kaffee-In</title>
+    <style>
+        /* Floating logo styles */
+        .floating-logo {
+            position: fixed; /* Fixed position */
+            top: 20px; /* Distance from the top */
+            left: 20px; /* Distance from the left */
+            z-index: 1000; /* Ensure it appears above other content */
+        }
+        .floating-logo img {
+            width: 50px; /* Adjust size as needed */
+            height: 50px; /* Adjust size as needed */
+            border-radius: 50%; /* Make the logo round */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+        }
+        /* Developer section styles */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            height: 100vh; /* Full viewport height */
+            width: 100vw; /* Full viewport width */
+            margin: 0; /* Remove default margin */
+            overflow: hidden; /* Prevent scrolling */
+        }
+        .developers-title {
+            position: absolute; /* Position it absolutely */
+            top: 5%; /* Adjust as needed */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center the text */
+            font-size: 3rem; /* Adjust font size to match the image */
+            color: black; /* Change color as needed */
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Optional shadow for better visibility */
+            z-index: 10; /* Ensure it appears above other content */
+        }
+        .developers-container {
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space between developers */
+            align-items: stretch; /* Stretch to fill height */
+            width: 100vw; /* Full width */
+            height: 100vh; /* Full viewport height */
+            max-height: 100vh; /* Maximum height to prevent scrolling */
+            padding: 0; /* No padding */
+        }
+        .developer {
+            flex: 1; /* Allow each developer to take equal space */
+            padding: 0; /* Padding inside each developer section */
+            text-align: center; /* Center text */
+            position: relative; /* Position relative for absolute positioning of name */
+            overflow: hidden; /* Hide overflow */
+            transition: transform 0.3s, z-index 0.3s; /* Smooth transition for hover effect */
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: flex-end; /* Align children to the bottom */
+        }
+        .developer:hover {
+            transform: scale(1.1); /* Enlarge on hover */
+            z-index: 1; /* Bring to front on hover */
+        }
+        .developer h2 {
+            font-size: 20px; /* Adjust font size for developer names */
+            color: rgb(0, 0, 0); /* Name color */
+            margin-top: 10px; /* Space above the name */
+            font-family: 'Arial', sans-serif; /* Font style */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s; /* Smooth transition for opacity */
+            position: absolute; /* Position absolutely */
+            bottom: 30px; /* Position at the bottom */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center the text */
+        }
+        .developer:hover h2 {
+            opacity: 1; /* Show name on hover */
+        }
+        .developer:nth-child(1), .developer:nth-child(3) {
+            background-color: #e0dfd8; /* Dirty white background */
+        }
+        .developer:nth-child(2) {
+            background-color: #735E59; /* Dark brown background */
+            color: white; /* White text for contrast */
+        }
+        .developer-image {
+            width: 100%; /* Full width of the container */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 100%; /* Set a maximum height to keep it smaller */
+            border-radius: 0px; /* Rounded corners for images */
+            transition: transform 0.3s; /* Smooth transition for image scaling */
+            margin: 0 auto; /* Center the image */
+        }
+        /* Developer name styles */
+        .developer-name {
+            position: relative; /* Position relative for absolute positioning */
+            display: inline-block; /* Allow background to wrap around text */
+            padding: 5px 20px; /* Add padding for the background */
+            background-color: #735E59; /* Background color */
+            color: #b6c2c2; /* Text color */
+            font-size: 0.8rem; /* Adjusted font size to make it smaller */
+            font-weight: bold; /* Bold text */
+            text-align: center; /* Center text */
+            margin-top: -30px; /* Adjust to overlap with image */
+            z-index: 1; /* Ensure it appears above other content */
+            border-radius: 0px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+        }
+        /* New title image styles */
+        .developers-title-image {
+            position: absolute; /* Position it absolutely */
+            top: 1.5%; /* Adjust as needed */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center the image */
+            width: 50%; /* Adjust width as needed */
+            z-index: 10; /* Ensure it appears above other content */
+            pointer-events: none; /* Allow clicks to pass through to underlying elements */
+        }
+        .developer .developer-name {
+            color: #b6c2c2; /* Text color */
+            font-size: 0.8rem; /* Adjusted font size to make it smaller */
+        }
+        /* Developer description panel styles */
+        .developer-description-panel {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Center the panel */
+            background-color: #f9f9f9; /* Light background for contrast */
+            border: 1px solid #ccc; /* Border */
+            padding: 20px; /* Padding */
+            z-index: 1000; /* Ensure it appears above other content */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            border-radius: 8px; /* Rounded corners for a softer look */
+            font-family: 'Arial', sans-serif; /* Font family for consistency */
+            color: #333; /* Darker text color for readability */
+        }
+        .close-panel {
+            cursor: pointer; /* Pointer cursor for close button */
+            color: #e74c3c; /* Close button color */
+            float: right; /* Float to the right */
+            font-weight: bold; /* Bold text for emphasis */
+        }
+        #developerName {
+            font-size: 1.5rem; /* Larger font size for the developer's name */
+            margin-bottom: 10px; /* Space below the name */
+            color: #735E59; /* Match the theme color */
+        }
+        #developerDescription {
+            font-size: 1rem; /* Standard font size for description */
+            line-height: 1.5; /* Improved line height for readability */
+            margin-bottom: 15px; /* Space below the description */
+        }
+        #developerLink {
+            color: #3498db; /* Link color */
+            text-decoration: underline; /* Underline for links */
+            font-weight: normal; /* Bold link for emphasis */
+        }
+        #developerLink:hover {
+            color: #2980b9; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="floating-logo">
+        <img src="img/your-logo-url.png" alt="KAFFEE IN LOGO"> <!-- Logo will be round -->
+    </a>
+    <main>
+        <img src="img/title-image.png" alt="Developers" class="developers-title-image"> <!-- New title image -->
+        <div class="developers-container">
+            <div class="developer" onclick="showDescription('John Daryll Bucao', 'John is known for his cool demeanor and coding skills.', 'https://example.com/bucao');">
+                <h2 class="developer-name">John Daryll Bucao</h2>
+                <img src="img/developer1.png" alt="Developer 1" class="developer-image">
+            </div>
+            <div class="developer" onclick="showDescription('Louise A. Villasurda', 'Louise is a creative developer with a sakit sa tuhod.', 'https://www.facebook.com/loyss.villasurda');">
+                <h2 class="developer-name">Louise Villasurda</h2>
+                <img src="img/developer3.png" alt="Developer 2" class="developer-image">
+            </div>
+            <div class="developer" onclick="showDescription('Lance Axel R. Minoza', 'Wa', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley');">
+                <h2 class="developer-name">Lance Axel R. Minoza</h2>
+                <img src="img/developer2.png" alt="Developer 3" class="developer-image">
+            </div>
+        </div>
+        <div id="descriptionPanel" class="developer-description-panel">
+            <span class="close-panel" onclick="closeDescription()">X</span>
+            <h3 id="developerName"></h3>
+            <p id="developerDescription"></p>
+            <a href="#" id="developerLink" target="_blank">Learn more</a> <!-- Open link in new tab -->
+        </div>
+    </main>
+    <script>
+        function showDescription(name, description, link) {
+            document.getElementById('developerName').innerText = name;
+            document.getElementById('developerDescription').innerText = description;
+            document.getElementById('developerLink').href = link; // Set the link for the developer
+            document.getElementById('descriptionPanel').style.display = 'block';
+        }
+
+        function closeDescription() {
+            document.getElementById('descriptionPanel').style.display = 'none';
+        }
+    </script>
+</body>
+</html> 

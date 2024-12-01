@@ -1,0 +1,53 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    text-align: center; /* Center text */
+}
+
+.logo img {
+    width: 80px; /* Logo size */
+    height: 80px; /* Logo size */
+    border-radius: 50%; /* Circular logo */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-bottom: 20px; /* Space below logo */
+}
+
+h1 {
+    color: #722410; /* Title color */
+    margin-bottom: 15px; /* Space below title */
+    font-size: 28px; /* Uniform title size */
+}
+
+h2 {
+    color: #544541; /* Subheading color */
+    margin-top: 20px; /* Space above subheadings */
+    font-size: 24px; /* Uniform subheading size */
+}
+
+h3 {
+    color: #544541; /* Sub-subheading color */
+    margin-top: 15px; /* Space above sub-subheadings */
+    font-size: 20px; /* Uniform sub-subheading size */
+}
+
+p, ul {
+    color: #333; /* Paragraph text color */
+    line-height: 1.6; /* Improved line height for readability */
+    margin: 10px 0; /* Space above and below paragraphs */
+    max-width: 600px; /* Limit width for better readability */
+    margin-left: auto; /* Center the paragraph */
+    margin-right: auto; /* Center the paragraph */
+    font-size: 16px; /* Uniform paragraph size */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+ul li {
+    text-align: left; /* Align list items to the left */
+    margin: 5px 0; /* Space between list items */
+} 

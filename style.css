@@ -1,0 +1,436 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 60px; /* Increase width */
+    height: 60px; /* Increase height to match width */
+    border-radius: 50%; /* Keep it circular */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the menu items */
+    flex-grow: 1; /* Allow the nav to grow and take available space */
+}
+
+nav ul {
+    font-size: 14px;
+    list-style: none;
+    display: flex; /* Keep the menu items in a row */
+    gap: 20px; /* Space between menu items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333; /* Default text color */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+nav a:hover {
+    color: #d9c6b2; /* Light brown color on hover */
+}
+
+.auth-buttons {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between sign in and join now */
+}
+
+.join-button {
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none; /* Remove border */
+    font-weight: bold; /* Make text bold */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.sign-in-button {
+    background-color: white; /* White background */
+    color: #333; /* Text color */
+    padding: 10px 15px;
+    border: 1px solid #333; /* Border color */
+    border-radius: 25px; /* Rounded corners */
+    text-decoration: none;
+    font-weight: bold; /* Make text bold */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.menu-button {
+    background-color: white; /* White background */
+    color: #333; /* Text color */
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold; /* Make text bold */
+}
+
+.promo-container {
+    display: flex;
+    align-items: stretch; /* Ensure children stretch to the same height */
+    justify-content: center; /* Center items horizontally */
+    padding: 40px 20px; /* Adjust padding for top/bottom */
+    margin: 0 auto; /* Center the container horizontally */
+    max-width: 75%; /* Limit the maximum width */
+}
+
+.promo-image {
+    max-width: 50%; /* Adjust width to create more space */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 0; /* Remove any margin to eliminate space */
+    margin-left: 0; /* Ensure no left margin */
+    flex: 0 0 auto; /* Prevent the image from stretching */
+}
+
+.promotion {
+    background-color: #ebded4; /* Light brown background */
+    padding: 20px;
+    border-radius: 0; /* Remove rounded corners */
+    margin-left: 0; /* Remove margin to eliminate space */
+    flex: 1; /* Allow promotion to take remaining space */
+    display: flex; /* Use flexbox for inner content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text horizontally */
+}
+
+.promotion-1 {
+    background-color: #6e9277; /* Light brown background */
+    padding: 20px;
+    border-radius: 0; /* Remove rounded corners */
+    margin-left: 0; /* Remove margin to eliminate space */
+    flex: 1; /* Allow promotion to take remaining space */
+    display: flex; /* Use flexbox for inner content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text horizontally */
+}
+
+.promotion-2 {
+    background-color: #a5e6fb; /* Light brown background */
+    padding: 20px;
+    border-radius: 0; /* Remove rounded corners */
+    margin-left: 0; /* Remove margin to eliminate space */
+    flex: 1; /* Allow promotion to take remaining space */
+    display: flex; /* Use flexbox for inner content */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text horizontally */
+}
+
+.promotion h1 {
+    color: #722410;
+    font-size: 24px; /* Adjust font size for headings */
+    margin-bottom: 10px; /* Space below heading */
+    text-align: center; /* Center heading text */
+}
+
+.promotion-1 h1 {
+    color: #ffe5b6;
+    font-size: 24px; /* Adjust font size for headings */
+    margin-bottom: 10px; /* Space below heading */
+    text-align: center; /* Center heading text */
+}
+
+.promotion-2 h1 {
+    color: black;
+    font-size: 24px; /* Adjust font size for headings */
+    margin-bottom: 10px; /* Space below heading */
+    text-align: center; /* Center heading text */
+}
+
+.promotion p {
+    color: #722410;
+    font-size: 16px; /* Adjust font size for paragraph */
+    margin-bottom: 20px; /* Space below paragraph */
+    text-align: center; /* Center paragraph text */
+}
+
+.promotion-1 p {
+    color: #ffe5b6;
+    font-size: 16px; /* Adjust font size for paragraph */
+    margin-bottom: 20px; /* Space below paragraph */
+    text-align: center; /* Center paragraph text */
+}
+
+.promotion-2 p {
+    color: black;
+    font-size: 16px; /* Adjust font size for paragraph */
+    margin-bottom: 20px; /* Space below paragraph */
+    text-align: center; /* Center paragraph text */
+}
+
+.explore-button {
+    background-color: #ebded4;
+    color: #722410;
+    padding: 8px 12px; /* Adjust padding for a smaller button */
+    border-radius: 25px;
+    border: 1px solid #722410;; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    font-weight: bold; /* Make text bold */
+    transition: background-color 0.3s; /* Smooth transition */
+    height: auto; /* Allow height to adjust based on content */
+    width: auto; /* Allow width to adjust based on content */
+    font-size: 14px; /* Adjust font size */
+    white-space: nowrap; /* Prevent text from wrapping */
+    display: inline-block; /* Allow the button to size based on content */
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+.order-button {
+    background-color: #6e9277;
+    color: #ffe5b6;
+    padding: 8px 12px; /* Adjust padding for a smaller button */
+    border-radius: 25px;
+    border: 1px solid #ffe5b6; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    font-weight: bold; /* Make text bold */
+    transition: background-color 0.3s; /* Smooth transition */
+    height: auto; /* Allow height to adjust based on content */
+    width: auto; /* Allow width to adjust based on content */
+    font-size: 14px; /* Adjust font size */
+    white-space: nowrap; /* Prevent text from wrapping */
+    display: inline-block; /* Allow the button to size based on content */
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+.order-button-1 {
+    background-color: #a5e6fb;
+    color: black;
+    padding: 8px 12px; /* Adjust padding for a smaller button */
+    border-radius: 25px;
+    border: 1px solid black; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+    font-weight: bold; /* Make text bold */
+    transition: background-color 0.3s; /* Smooth transition */
+    height: auto; /* Allow height to adjust based on content */
+    width: auto; /* Allow width to adjust based on content */
+    font-size: 14px; /* Adjust font size */
+    white-space: nowrap; /* Prevent text from wrapping */
+    display: inline-block; /* Allow the button to size based on content */
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+.explore-button:hover {
+    background-color: #722410; /* Darker shade on hover */
+    color: #ebded4;
+}
+
+.order-button:hover {
+    background-color: #ffe5b6; /* Darker shade on hover */
+    color: #6e9277;
+}
+
+.order-button-1:hover {
+    background-color: black; /* Darker shade on hover */
+    color: #a5e6fb;
+}
+
+footer {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-links h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-order, .footer-signup {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-signup input {
+    padding: 10px;
+    margin-top: 10px;
+    width: calc(100% - 22px); /* Adjust for padding */
+}
+
+.subscribe-button {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-family: FontAwesome; /* Ensure FontAwesome is included for icons */
+}
+
+.profile-image {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border-radius: 50%; /* Make it circular */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.profile-panel {
+    display: none; /* Initially hidden */
+    position: absolute; /* Position it relative to the profile image */
+    background-color: white; /* White background for the panel */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 10px; /* Padding inside the panel */
+    right: 0; /* Align to the right of the profile image */
+    top: 60px; /* Position below the profile image */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.profile-panel button {
+    background-color: black; /* Brown background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Padding for the button */
+    cursor: pointer; /* Pointer cursor */
+    font-weight: bold; /* Bold text */
+    width: 100%; /* Full width */
+    margin: 5px 0; /* Space between buttons */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.profile-panel button:hover {
+    background-color: #5C4033; /* Darker shade on hover */
+}
+
+
+.logo a {
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.sign-in-button,
+.join-button {
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.sign-in-button:hover,
+.join-button:hover {
+    color: #d9c6b2; /* Light brown color on hover */
+}
+
+.sign-in-button {
+    color: #333; /* Default text color */
+}
+
+.join-button {
+    color: #333; /* Default text color */
+}
+
+.gif-container {
+    position: relative; /* Ensure the container is positioned relative for absolute positioning of the button */
+    width: 100%; /* Use full width */
+    max-width: 1600px; /* Set a maximum width */
+    height: 600px; /* Fixed height */
+    overflow: hidden; /* Hide overflow */
+    margin: 20px auto; /* Center the container and add space above and below */
+}
+
+.promo-gif {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Ensure the GIF covers the area without distortion */
+}
+
+.gif-button {
+    position: absolute; /* Position the button on top of the GIF */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for button size */
+    background-color: #54442b90; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 0px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.gif-button:hover {
+    background-color: #d9c6b2; /* Darker shade on hover */
+}
+
+.text-container {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center the text */
+    margin: 40px 0; /* Increased space above and below the text */
+}
+
+.promo-title {
+    font-size: 24px; /* Adjust font size for the title */
+    font-weight: bold; /* Make the title bold */
+    margin: 0; /* Remove default margin */
+}
+
+.promo-subtitle {
+    font-size: 12px; /* Adjust font size for the subtitle */
+    margin: 10px 0; /* Space below the subtitle */
+    color: #333; /* Subtitle color */
+}   
+

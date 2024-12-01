@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    text-align: center; /* Center text */
+}
+
+.logo img {
+    width: 60px; /* Logo size */
+    height: 60px; /* Logo size */
+    border-radius: 50%; /* Circular logo */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+h1 {
+    color: #544541; /* Title color */
+    margin-bottom: 20px; /* Space below title */
+}
+
+form {
+    background-color: #fff; /* White background for form */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: inline-block; /* Center form */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin: 10px 0 5px; /* Space around labels */
+}
+
+input, textarea {
+    width: 80%; /* Full width */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+button {
+    background-color: #544541; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-weight: bold; /* Bold text */
+}
+
+button:hover {
+    background-color: #5C4033; /* Darker shade on hover */
+} 

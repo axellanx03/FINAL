@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit-details.css">
+    <link rel="icon" href="img/your-logo-url.png" type="image/png">
+    <title>Edit Details - Kaffee-In</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img src="img/your-logo-url.png" alt="Kaffee-In Logo" class="logo">
+        </a>
+    </header>
+    <div class="container">
+        <h2>Personal Information</h2>
+        <form id="editDetailsForm">
+            <label for="firstName">* First name</label>
+            <input type="text" id="firstName" required>
+
+            <label for="lastName">* Last name</label>
+            <input type="text" id="lastName" required>
+
+            <h2>Account Security</h2>
+            <label for="email">* Email address</label>
+            <input type="email" id="email" required>
+
+            <label for="password">* Password</label>
+            <input type="password" id="password" required>
+            <small>Create a password 8 to 25 characters long that includes at least 1 uppercase and 1 lowercase letter, 1 number, and 1 special character like an exclamation point or asterisk.</small>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
